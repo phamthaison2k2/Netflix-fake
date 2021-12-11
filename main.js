@@ -4,11 +4,26 @@
 const headerInput = document.querySelector('.js-header__search-input');
 const headerButton = document.querySelector('.js-header__search-button');
 const headerSearch = document.querySelector('.header__search');
+const headerInputMobile = document.querySelector('.header__search-input--mobile');
 
 
 headerButton.onclick = function() {
     headerInput.classList.toggle('header__search-input-active');
     headerSearch.classList.toggle('header__search-active')
+    
+    headerInputMobile.classList.toggle('header__search-input--mobile-active')
+
+    this.previousElementSibling.focus();
+}
+
+
+
+//
+const headerBell = document.querySelector('.header__icon-2')
+const headerBellNotification = document.querySelector('.header__notification')
+
+headerBell.onclick = function() {
+    headerBellNotification.classList.toggle('header__notification-active')
 }
 
 
